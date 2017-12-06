@@ -37,7 +37,7 @@ function part2Solution(input) {
   // puzzle input is found
   grid.set(0, 0, 1);
   let lastCellValue = 0;
-  for (cellIndex = 2; lastCellValue < input; cellIndex++) {
+  for (let cellIndex = 2; lastCellValue < input; cellIndex++) {
     const { x, y } = getSpiralCoordinates(cellIndex);
     const neighboursSum = sumNeighbours(x, y);
     grid.set(x, y, neighboursSum);
